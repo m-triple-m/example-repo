@@ -29,7 +29,7 @@ const Login = () => {
         // window.location.replace('/productlist');
 
 
-        fetch(url+'/user/getbyemail/'+values.email)
+        fetch ( url + '/user/getbyemail/' + values . email )
         .then( (res) => {
             console.log(res.status);
             return res.json();
