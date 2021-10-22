@@ -17,7 +17,7 @@ const Login = () => {
     password: "",
   };
 
-  const SubmitForm = (values) => {
+  const SubmitLoginForm = (values) => {
     console.log(values);
 
     fetch(url + "/user/getbyemail/" + values.email)
@@ -67,7 +67,7 @@ const Login = () => {
           <h3 className="mt-5 text-center">Login Form</h3>
           <hr />
 
-          <Formik initialValues={loginform} onSubmit={SubmitForm}>
+          <Formik initialValues={loginform} onSubmit={SubmitLoginForm}>
             {({ values, handleChange, handleSubmit }) => (
               <form onSubmit={handleSubmit}>
                 <label className="mt-3" htmlFor="email">
