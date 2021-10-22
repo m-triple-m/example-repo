@@ -23,11 +23,6 @@ const Login = () => {
 
     const SubmitLogin = (values) => {
         console.log(values);
-        // values.username = "Leon Kennedy";
-
-        // sessionStorage.setItem('user', JSON.stringify(values));
-        // window.location.replace('/productlist');
-
 
         fetch ( url + '/user/getbyemail/' + values . email )
         .then( (res) => {
